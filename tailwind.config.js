@@ -1,3 +1,5 @@
+const { fontFamily } = require('tailwindcss/defaultTheme');
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
     darkMode: ['class'],
@@ -10,13 +12,17 @@ module.exports = {
     theme: {
         container: {
             center: true,
-            padding: '2rem',
             screens: {
                 '2xl': '1400px',
             },
         },
         extend: {
+            fontFamily: {
+                sans: ['var(--font-sans)', ...fontFamily.sans],
+                heading: ['var(--font-heading)', ...fontFamily.sans],
+            },
             colors: {
+                main: '#60a5fa',
                 border: 'hsl(var(--border))',
                 input: 'hsl(var(--input))',
                 ring: 'hsl(var(--ring))',
@@ -55,6 +61,13 @@ module.exports = {
                 lg: 'var(--radius)',
                 md: 'calc(var(--radius) - 2px)',
                 sm: 'calc(var(--radius) - 4px)',
+            },
+            fontSize: {
+                '10xl': ['9rem', '8.25rem'],
+            },
+            lineHeight: {
+                title: '0.85',
+                '1/2': '0.5',
             },
             keyframes: {
                 'accordion-down': {
