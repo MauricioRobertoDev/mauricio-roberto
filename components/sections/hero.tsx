@@ -3,8 +3,8 @@ import Logo from '../ui/logo';
 
 export function Hero() {
     return (
-        <section id="hero" className="w-full h-screen pt-16">
-            <div className="container relative flex flex-col items-start md:items-center justify-center h-fit md:h-full mx-auto overflow-hidden px-4 p-12">
+        <section id="hero" className="w-full md:h-screen pt-16">
+            <div className="container relative flex flex-col items-start md:items-center justify-center h-fit md:h-full mx-auto overflow-hidden px-4 py-20">
                 <div className="hidden  md:absolute md:flex items-center justify-center">
                     <div className="absolute w-96 h-96 scale-[.2] md:scale-[.7] rounded-full aspect-square bg-main  opacity-50 blur-3xl"></div>
                     <Logo className="absolute  aspect-square w-96 scale-[.15] md:scale-[.7] lg:scale-100" />
@@ -30,8 +30,6 @@ export function Hero() {
                 </h1>
                 <div className="hidden absolute left-0 md:flex items-center justify-between w-full px-4 bottom-6">
                     <ArrowDown className="w-10 h-10 stroke-2 animate-bounce dark:text-white/20 text-black/20" />
-
-                    <div className="text-2xl font-black font-heading"> 2023. </div>
                 </div>
             </div>
         </section>
