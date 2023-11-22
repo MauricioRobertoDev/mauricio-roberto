@@ -28,7 +28,7 @@ export function Technologies() {
     ];
 
     return (
-        <section className="">
+        <section id="tecnologias">
             <div className="container py-16 md:py-20 mx-auto px-4">
                 <div className="w-full mx-auto prose text-left max-w-prose">
                     <h2 className="flex items-center gap-4 mb-8 md:mb-10 text-3xl md:text-4xl font-black font-heading dark:text-white">
