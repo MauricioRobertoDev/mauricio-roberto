@@ -91,7 +91,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     enableSystem
                     disableTransitionOnChange
                 >
-                    <header className="fixed top-0 z-40 w-full border-b bg-background">
+                    <header className="fixed top-0 z-50 w-full border-b bg-background/75 backdrop-blur-xl">
                         <div className="container flex items-center justify-between h-16 px-4 py-4">
                             <Logo />
                             <MainNav items={dashboardConfig.mainNav} />
