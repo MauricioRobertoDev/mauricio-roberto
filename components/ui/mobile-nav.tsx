@@ -14,7 +14,7 @@ export function MobileNav({ items, children }: MobileNavProps) {
     return (
         <div
             className={cn(
-                'fixed border border-red-500 inset-0 top-16 z-50 grid h-[calc(100vh-4rem)] grid-flow-row auto-rows-max overflow-auto p-0 pb-32 shadow-md animate-in slide-in-from-top-20 md:hidden',
+                'fixed border inset-0 top-16 z-50 grid h-[calc(100vh-4rem)] grid-flow-row auto-rows-max overflow-auto p-0 pb-32 shadow-md animate-in slide-in-from-top-20 md:hidden',
             )}
         >
             <div className="relative grid gap-6 p-4 border rounded-md shadow-md -z-20 bg-popover text-popover-foreground">
