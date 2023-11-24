@@ -1,3 +1,4 @@
+import Analytics from '@/components/analytics';
 import { ThemeProvider } from '@/components/theme-provider';
 import Logo from '@/components/ui/logo';
 import { MainNav } from '@/components/ui/main-nav';
@@ -7,6 +8,7 @@ import { cn } from '@/lib/utils';
 import { Viewport } from 'next';
 import { Inter } from 'next/font/google';
 import localFont from 'next/font/local';
+import { Suspense } from 'react';
 import './globals.css';
 
 const inter = Inter({
@@ -80,6 +82,10 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
         <html lang="pt-br">
+            <Suspense>
+                <Analytics />
+            </Suspense>
+
             <body
                 className={cn(
                     'min-h-screen bg-background antialiased font-sans',
