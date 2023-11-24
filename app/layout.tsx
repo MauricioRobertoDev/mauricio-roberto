@@ -81,7 +81,6 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
         <html lang="pt-br">
-            <Analytics />
             <body
                 className={cn(
                     'min-h-screen bg-background antialiased font-sans',
@@ -89,6 +88,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     fontHeading.variable,
                 )}
             >
+                <Analytics />
                 <ThemeProvider
                     attribute="class"
                     defaultTheme="system"
