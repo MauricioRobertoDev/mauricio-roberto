@@ -60,6 +60,7 @@ export function MainNav({ items, children }: MainNavProps) {
                     size="icon"
                     className=" md:hidden"
                     onClick={() => setShowMobileMenu(!showMobileMenu)}
+                    aria-label="abrir ou fechar menu"
                 >
                     {showMobileMenu ? <X /> : <Menu />}
                 </Button>

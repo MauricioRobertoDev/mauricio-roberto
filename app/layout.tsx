@@ -32,6 +32,9 @@ export const metadata = {
         default: siteConfig.name,
         template: `%s | ${siteConfig.name}`,
     },
+    alternates: {
+        canonical: `${siteConfig.url}`,
+    },
     description: siteConfig.description,
     keywords: [
         'Desenvolvedor',
@@ -51,7 +54,6 @@ export const metadata = {
         },
     ],
     creator: 'Mauricio Roberto',
-
     openGraph: {
         type: 'website',
         locale: 'pt_BR',
