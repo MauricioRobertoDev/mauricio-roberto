@@ -3,6 +3,7 @@ import { Contact } from '@/components/sections/contact';
 import { Hero } from '@/components/sections/hero';
 import { Separator } from '@/components/sections/separator';
 import { Technologies } from '@/components/sections/technologies';
+import { BackTopButton } from '@/components/ui/back-top-button';
 
 export default function Home() {
     return (
@@ -14,6 +15,7 @@ export default function Home() {
             <Technologies />
             <Separator />
             <Contact />
+            <BackTopButton />
         </main>
     );
 }
