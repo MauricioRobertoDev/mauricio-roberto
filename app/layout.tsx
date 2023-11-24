@@ -8,7 +8,6 @@ import { cn } from '@/lib/utils';
 import { Viewport } from 'next';
 import { Inter } from 'next/font/google';
 import localFont from 'next/font/local';
-import { Suspense } from 'react';
 import './globals.css';
 
 const inter = Inter({
@@ -82,10 +81,7 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
         <html lang="pt-br">
-            <Suspense>
-                <Analytics />
-            </Suspense>
-
+            <Analytics />
             <body
                 className={cn(
                     'min-h-screen bg-background antialiased font-sans',
@@ -99,7 +95,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     enableSystem
                     disableTransitionOnChange
                 >
-                    <header className="fixed top-0 z-50 w-full border-b bg-background/75 backdrop-blur-xl">
+                    <header className="fixed top-0 z-50 w-full bg-background">
                         <div className="container flex items-center justify-between h-16 px-4 py-4">
                             <Logo />
                             <MainNav items={dashboardConfig.mainNav} />
