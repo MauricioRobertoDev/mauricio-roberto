@@ -18,3 +18,8 @@ export type MainNavItem = {
 export type DashboardConfig = {
     mainNav: MainNavItem[];
 };
+
+export type Technology = {
+    name: string;
+    image: string;
+};

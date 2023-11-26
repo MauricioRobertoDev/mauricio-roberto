@@ -1,34 +1,8 @@
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
+import technologies from '@/data/technologies';
 import Image from 'next/image';
 
 export function Technologies() {
-    const technologies = [
-        'php',
-        'javascript',
-        'typescript',
-        'golang',
-        'html',
-        'css',
-        'tailwindcss',
-        'vue',
-        'reactjs',
-        'node',
-        'npm',
-        'laravel',
-        'composer',
-        'figma',
-        'git',
-        'github',
-        'mysql',
-        'pestphp',
-        'postman',
-        'visual',
-        'vite',
-        'vitest',
-        'docker',
-        'insomia',
-    ];
-
     return (
         <section id="tecnologias">
             <div className="container px-4 py-16 mx-auto md:py-20">
@@ -49,15 +23,15 @@ export function Technologies() {
                                 <TooltipTrigger>
                                     <div className="flex items-center justify-center p-3 border rounded-lg dark:border-white/20">
                                         <Image
-                                            src={'/images/' + tech + '.png'}
-                                            alt={tech}
+                                            src={'/images/' + tech.image + '.png'}
+                                            alt={tech.name}
                                             width={40}
                                             height={40}
                                         />
                                     </div>
                                 </TooltipTrigger>
                                 <TooltipContent>
-                                    <p>{tech}</p>
+                                    <p>{tech.name}</p>
                                 </TooltipContent>
                             </Tooltip>
                         </TooltipProvider>
