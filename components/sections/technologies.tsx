@@ -23,7 +23,7 @@ export function Technologies() {
                                 <TooltipTrigger>
                                     <div className="flex items-center justify-center p-3 border rounded-lg dark:border-white/20">
                                         <Image
-                                            src={'/images/' + tech.image + '.png'}
+                                            src={'/images/technologies/' + tech.image + '.webp'}
                                             alt={tech.name}
                                             width={40}
                                             height={40}
