@@ -39,7 +39,7 @@ export function MainNav({ items }: MainNavProps) {
                             {item.title}
                         </Link>
                     ))}
-                    <a href={siteConfig.links.github} target="__blank">
+                    <a href={siteConfig.links.github} target="__blank" rel="noreferrer noopener">
                         <Button className="gap-2 text-lg md:text-sm">
                             <Icons.gitHub className="w-6 h-5 md:h-4 md:w-4" />
                             Github
@@ -49,7 +49,7 @@ export function MainNav({ items }: MainNavProps) {
             ) : null}
 
             <div className="flex gap-1">
-                <ToggleTheme className="z-50  md:animate-none md:animate-in md:slide-in-from-top-full" />
+                <ToggleTheme className="z-50 md:animate-none md:animate-in md:slide-in-from-top-full" />
                 <Button
                     variant="outline"
                     size="icon"

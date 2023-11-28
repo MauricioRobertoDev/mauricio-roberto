@@ -30,21 +30,41 @@ export function Hero() {
                         </span>
                     </div>
                 </h1>
-                <div className="absolute bottom-0 left-0 flex-col items-center justify-between hidden gap-5 text-muted-foreground w-min md:flex">
-                    <a href={siteConfig.links.github} className="group">
+                <aside className="absolute bottom-0 left-0 flex-col items-center justify-between hidden gap-5 text-muted-foreground w-min md:flex">
+                    <a
+                        href={siteConfig.links.github}
+                        className="group"
+                        rel="noreferrer noopener"
+                        target="_blank"
+                    >
                         <Icons.gitHub className="w-5 h-5 group-hover:text-main" />
                     </a>
-                    <a href={siteConfig.links.youtube} className="group">
+                    <a
+                        href={siteConfig.links.youtube}
+                        className="group"
+                        rel="noreferrer noopener"
+                        target="_blank"
+                    >
                         <Icons.Youtube className="w-5 h-5 group-hover:text-main" />
                     </a>
-                    <a href={siteConfig.links.whatsapp} className="group">
+                    <a
+                        href={siteConfig.links.whatsapp}
+                        className="group"
+                        rel="noreferrer noopener"
+                        target="_blank"
+                    >
                         <Icons.whatsapp className="w-4 h-4 group-hover:text-main" />
                     </a>
-                    <a href={siteConfig.links.twitter} className="group">
+                    <a
+                        href={siteConfig.links.twitter}
+                        className="group"
+                        rel="noreferrer noopener"
+                        target="_blank"
+                    >
                         <Icons.Twitter className="w-5 h-5 group-hover:text-main" />
                     </a>
                     <div className="w-0.5 rounded-full h-12 bg-muted-foreground"></div>
-                </div>
+                </aside>
             </div>
         </section>
     );
