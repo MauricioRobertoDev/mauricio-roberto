@@ -2,13 +2,27 @@ import { Menu } from '@/components/menu';
 import { ThemeProvider } from '@/components/theme-provider';
 import { cn } from '@/lib/utils';
 import type { Metadata } from 'next';
+import { Viewport } from 'next';
 import { Inter } from 'next/font/google';
+import localFont from 'next/font/local';
 import './globals.css';
 
 const inter = Inter({
     subsets: ['latin'],
     variable: '--font-sans',
 });
+
+const heading = localFont({
+    src: '../assets/fonts/Head-Black.woff2',
+    variable: '--font-heading',
+});
+
+export const viewport: Viewport = {
+    themeColor: [
+        { media: '(prefers-color-scheme: light)', color: 'white' },
+        { media: '(prefers-color-scheme: dark)', color: 'black' },
+    ],
+};
 
 export const metadata: Metadata = {
     title: 'Create Next App',
@@ -19,7 +33,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     return (
         <html lang="pt-br">
             <body
-                className={cn('min-h-screen bg-background antialiased font-sans ', inter.className)}
+                className={cn(
+                    'min-h-screen bg-background antialiased font-sans scroll-smooth',
+                    inter.variable,
+                    heading.variable,
+                )}
             >
                 <ThemeProvider
                     attribute="class"
