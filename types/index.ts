@@ -6,7 +6,10 @@ export type SiteConfig = {
     links: {
         twitter: string;
         github: string;
+        youtube: string;
+        whatsapp: string;
     };
+    author: string;
 };
 
 export type MainNavItem = {
