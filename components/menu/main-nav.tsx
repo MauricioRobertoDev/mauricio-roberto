@@ -39,12 +39,21 @@ export function MainNav({ items }: MainNavProps) {
                             {item.title}
                         </Link>
                     ))}
-                    <a href={siteConfig.links.github} target="__blank" rel="noreferrer noopener">
+                    <a
+                        href={siteConfig.links.github}
+                        target="__blank"
+                        rel="noreferrer noopener"
+                        aria-labelledby="link-for-my-github"
+                        role="link"
+                    >
                         <Button className="gap-2 text-lg md:text-sm">
                             <Icons.gitHub className="w-6 h-5 md:h-4 md:w-4" />
                             Github
                         </Button>
                     </a>
+                    <p id="link-for-my-github" className="sr-only">
+                        link para meu github
+                    </p>
                 </nav>
             ) : null}
 
