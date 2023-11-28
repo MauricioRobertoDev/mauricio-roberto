@@ -13,8 +13,8 @@ export function ToggleTheme(props: ButtonProps) {
             onClick={() => setTheme(theme && theme == 'light' ? 'dark' : 'light')}
             {...props}
         >
-            <Icons.Moon className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-            <Icons.Sun className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+            <Icons.Moon className="w-5 h-5 dark:hidden" />
+            <Icons.Sun className="hidden w-5 h-5 dark:block" />
             <span className="sr-only">Mudar tema</span>
         </Button>
     );
