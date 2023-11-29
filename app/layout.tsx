@@ -6,7 +6,6 @@ import { cn } from '@/lib/utils';
 import { Viewport } from 'next';
 import { Inter } from 'next/font/google';
 import localFont from 'next/font/local';
-import { Suspense } from 'react';
 import './globals.css';
 
 const inter = Inter({
@@ -87,9 +86,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     heading.variable,
                 )}
             >
-                <Suspense>
-                    <Analytics />
-                </Suspense>
                 <ThemeProvider
                     attribute="class"
                     defaultTheme="system"
@@ -98,6 +94,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 >
                     <Menu />
                     {children}
+                    <Analytics />
                 </ThemeProvider>
             </body>
         </html>
