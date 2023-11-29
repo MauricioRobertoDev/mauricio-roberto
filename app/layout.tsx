@@ -34,7 +34,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <html lang="pt-br">
             <body
                 className={cn(
-                    'min-h-screen bg-background antialiased font-sans scroll-smooth',
+                    'min-h-screen bg-background antialiased font-sans scroll-smooth scrollbar-thin scrollbar-track-foreground/5 scrollbar-thumb-main',
                     inter.variable,
                     heading.variable,
                 )}
