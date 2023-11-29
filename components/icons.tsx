@@ -1,4 +1,14 @@
-import { LucideProps, Menu, Moon, Sun, Twitter, X, Youtube, type LucideIcon } from 'lucide-react';
+import {
+    ArrowUp,
+    LucideProps,
+    Menu,
+    Moon,
+    Sun,
+    Twitter,
+    X,
+    Youtube,
+    type LucideIcon,
+} from 'lucide-react';
 
 export type Icon = LucideIcon;
 
@@ -77,4 +87,5 @@ export const Icons = {
     Sun,
     Youtube,
     Twitter,
+    ArrowUp,
 };
