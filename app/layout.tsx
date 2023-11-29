@@ -3,6 +3,7 @@ import { Menu } from '@/components/menu';
 import { ThemeProvider } from '@/components/theme-provider';
 import { siteConfig } from '@/config/site';
 import { cn } from '@/lib/utils';
+import { Analytics as VercelAnalytics } from '@vercel/analytics/react';
 import { Viewport } from 'next';
 import { Inter } from 'next/font/google';
 import localFont from 'next/font/local';
@@ -94,6 +95,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 >
                     <Menu />
                     {children}
+                    <VercelAnalytics />
                 </ThemeProvider>
                 <Analytics />
             </body>
