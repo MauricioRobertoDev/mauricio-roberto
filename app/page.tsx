@@ -1,5 +1,6 @@
 import { About } from '@/components/about';
 import { Hero } from '@/components/hero';
+import { Technologies } from '@/components/technologies';
 
 export default function Home() {
     return (
@@ -7,8 +8,7 @@ export default function Home() {
             <main className="min-h-screen selection:bg-main selection:text-foreground">
                 <Hero />
                 <About />
-                <div className="w-full h-screen bg-green-500"></div>
-                <div className="w-full h-screen bg-blue-500"></div>
+                <Technologies />
             </main>
         </>
     );
