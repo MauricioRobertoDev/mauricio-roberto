@@ -8,11 +8,18 @@
         "start": "next start",
         "lint": "next lint",
         "style:check": "prettier . --check",
-        "style:fix": "prettier . --write"
+        "style:fix": "prettier . --write",
+        "email": "email dev --dir='emails'"
     },
     "dependencies": {
+        "@hookform/resolvers": "^3.3.2",
+        "@radix-ui/react-label": "^2.0.2",
         "@radix-ui/react-slot": "^1.0.2",
         "@radix-ui/react-tooltip": "^1.0.7",
+        "@react-email/components": "^0.0.11",
+        "@react-email/html": "^0.0.6",
+        "@react-email/render": "^0.0.9",
+        "axios": "^1.6.2",
         "class-variance-authority": "^0.7.0",
         "clsx": "^2.0.0",
         "lucide-react": "^0.293.0",
@@ -20,8 +27,12 @@
         "next-themes": "^0.2.1",
         "react": "^18",
         "react-dom": "^18",
+        "react-email": "^1.9.5",
+        "react-hook-form": "^7.48.2",
+        "resend": "^2.0.0",
         "tailwind-merge": "^2.0.0",
-        "tailwindcss-animate": "^1.0.7"
+        "tailwindcss-animate": "^1.0.7",
+        "zod": "^3.22.4"
     },
     "devDependencies": {
         "@types/node": "^20",
@@ -33,6 +44,7 @@
         "eslint-config-prettier": "^9.0.0",
         "postcss": "^8",
         "prettier": "^3.1.0",
+        "strip": "^3.0.0",
         "tailwindcss": "^3.3.0",
         "typescript": "^5"
     }
