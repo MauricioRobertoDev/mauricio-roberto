@@ -1,4 +1,5 @@
 import { About } from '@/components/about';
+import { BackTopButton } from '@/components/back-top-button';
 import { Contact } from '@/components/contact';
 import { Hero } from '@/components/hero';
 import { Technologies } from '@/components/technologies';
@@ -11,6 +12,7 @@ export default function Home() {
                 <About />
                 <Technologies />
                 <Contact />
+                <BackTopButton />
             </main>
         </>
     );
