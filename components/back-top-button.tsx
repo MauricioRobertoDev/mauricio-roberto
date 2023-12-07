@@ -27,7 +27,7 @@ export function BackTopButton() {
                     onClick={() => scrollToTop()}
                     variant="outline"
                     size="icon"
-                    className="fixed z-50 flex items-center justify-center w-12 h-12 text-white rounded-full text-background bg-main bottom-4 right-4"
+                    className="fixed z-40 flex items-center justify-center w-12 h-12 text-white rounded-full text-background bg-main bottom-4 right-4"
                 >
                     <Icons.ArrowUp />
                 </Button>

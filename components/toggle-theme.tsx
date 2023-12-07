@@ -8,7 +8,7 @@ export function ToggleTheme(props: ButtonProps) {
 
     return (
         <Button
-            variant="outline"
+            variant="ghost"
             size="icon"
             onClick={() => setTheme(theme && theme == 'light' ? 'dark' : 'light')}
             {...props}
