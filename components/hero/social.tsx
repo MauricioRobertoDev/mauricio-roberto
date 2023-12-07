@@ -19,7 +19,7 @@ export function HeroSocial({ className }: HTMLAttributes<HTMLDivElement>) {
                 aria-labelledby="link-for-github"
                 role="link"
             >
-                <Icons.gitHub className="w-5 h-5 group-hover:text-main" />
+                <Icons.github className="w-5 h-5 group-hover:text-main" />
             </a>
 
             <a

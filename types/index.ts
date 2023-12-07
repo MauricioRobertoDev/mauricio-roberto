@@ -23,6 +23,7 @@ export type MenuConfig = {
 };
 
 export type Technology = {
-    name: string;
-    image: string;
+    icon: string;
+    text: string;
+    href?: string;
 };

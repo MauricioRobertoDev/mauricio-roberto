@@ -9,6 +9,14 @@ import {
     Youtube,
     type LucideIcon,
 } from 'lucide-react';
+import { BiLogoPhp, BiLogoReact, BiLogoTailwindCss, BiLogoTypescript } from 'react-icons/bi';
+import { DiJavascript1 } from 'react-icons/di';
+import { FaGit, FaLaravel, FaNodeJs, FaNpm, FaVuejs } from 'react-icons/fa';
+import { GrMysql } from 'react-icons/gr';
+import { LuArrowUpRight, LuGithub } from 'react-icons/lu';
+import { MdOutlineCss, MdOutlineHtml } from 'react-icons/md';
+import { SiDocker, SiInsomnia, SiVitest } from 'react-icons/si';
+import { TbBrandGolang, TbBrandVite } from 'react-icons/tb';
 
 export type Icon = LucideIcon;
 
@@ -31,24 +39,6 @@ export const Icons = {
         </svg>
     ),
 
-    gitHub: ({ ...props }: LucideProps) => (
-        <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="none"
-            role="img"
-            aria-hidden="true"
-            focusable="false"
-            data-icon="github"
-            stroke="currentColor"
-            strokeWidth={2}
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            {...props}
-        >
-            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-        </svg>
-    ),
     whatsapp: ({ ...props }: LucideProps) => (
         <svg
             fill="currentColor"
@@ -81,6 +71,15 @@ export const Icons = {
             </g>
         </svg>
     ),
+    pestphp: ({ ...props }: LucideProps) => (
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 204" {...props}>
+            <title>pestphp logo</title>
+            <path
+                fill="currentColor"
+                d="M227.3,57.9C232.9,26,211.6,0,179.8,0h-144L25.6,57.9h144l-3.4,19.3h-144L0,204h57.6l12.1-69h86.4 c31.8,0,62.2-26,67.8-57.9L227.3,57.9z M396.6,77.8H243.5l-9,48.4h153L396.6,77.8z M458.2,0H256.6l-10.2,58h201.7L458.2,0z M220.8,204h201.7l10.1-58H231L220.8,204z M535,0c-31.4,0-61.7,26.5-67.8,58l-1.7,9.7h0.1c-3.9,30.8,16.7,57,47.6,57h86.4l-3.8,21.3 h-144l-10.2,58h144c31.8,0,62.2-26,67.8-58l3.7-21.3c5.6-32-15.7-58-47.5-58h-86.4l1.5-8.7h192.1l-25.6,146H749l25.6-146h57.6 C864,58,894.4,32,900,0H535z"
+            />
+        </svg>
+    ),
     X,
     Menu,
     Moon,
@@ -88,4 +87,25 @@ export const Icons = {
     Youtube,
     Twitter,
     ArrowUp,
+    external: LuArrowUpRight,
+    // techs
+    php: BiLogoPhp,
+    laravel: FaLaravel,
+    react: BiLogoReact,
+    javascript: DiJavascript1,
+    typescript: BiLogoTypescript,
+    html: MdOutlineHtml,
+    css: MdOutlineCss,
+    tailwindcss: BiLogoTailwindCss,
+    vuejs: FaVuejs,
+    nodejs: FaNodeJs,
+    npm: FaNpm,
+    git: FaGit,
+    github: LuGithub,
+    mysql: GrMysql,
+    docker: SiDocker,
+    vite: TbBrandVite,
+    vitest: SiVitest,
+    golang: TbBrandGolang,
+    insomnia: SiInsomnia,
 };

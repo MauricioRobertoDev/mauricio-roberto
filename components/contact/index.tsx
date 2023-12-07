@@ -47,7 +47,7 @@ export function Contact() {
                         role="link"
                         className="h-10 gap-3 border dark:border-white/20 px-3 flex items-center justify-center border-0.5 text-black/75 hover:text-black/100 dark:text-white/75 rounded-md hover:text-main hover:dark:text-main hover:border-main hover:dark:border-main hover:bg-main/5 hover:scale-110 duration-300 transition"
                     >
-                        <Icons.gitHub className="w-5 h-5" />
+                        <Icons.github className="w-5 h-5" />
                         @mauriciorobertodev
                     </a>
 
