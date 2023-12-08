@@ -50,7 +50,7 @@ export function ContactForm() {
                 <Form {...form}>
                     <form
                         onSubmit={form.handleSubmit(onSubmit)}
-                        className="w-full py-12 mx-auto space-y-6 prose text-left max-w-prose dark:text-white"
+                        className="w-full  space-y-6 prose text-left max-w-prose dark:text-white"
                     >
                         <FormField
                             control={form.control}

@@ -14,7 +14,7 @@ export function Technologies() {
                             das principais tecnologias que fazem parte do meu conjunto de
                             habilidades:
                         </p>
-                        <div className="flex flex-wrap w-full gap-4 py-4">
+                        <div className="flex flex-wrap w-full gap-2 md:gap-4 py-4">
                             {techs.map((tech, index) => (
                                 <TechLink key={'tech-icon-' + index} {...(tech as TechLinkProps)} />
                             ))}

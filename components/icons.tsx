@@ -1,10 +1,12 @@
 import { ArrowUp, LucideProps, Menu, Moon, Sun, X, Youtube, type LucideIcon } from 'lucide-react';
+import { AiOutlinePlus } from 'react-icons/ai';
 import { BiLogoPhp, BiLogoReact, BiLogoTailwindCss, BiLogoTypescript } from 'react-icons/bi';
 import { DiJavascript1 } from 'react-icons/di';
-import { FaGit, FaLaravel, FaNodeJs, FaNpm, FaVuejs } from 'react-icons/fa';
-import { FaXTwitter } from 'react-icons/fa6';
+import { FaGit, FaLaravel, FaNodeJs, FaNpm, FaShieldAlt, FaVuejs } from 'react-icons/fa';
+import { FaChevronLeft, FaXTwitter } from 'react-icons/fa6';
 import { GrMysql } from 'react-icons/gr';
-import { LuArrowUpRight, LuGithub } from 'react-icons/lu';
+import { LiaUndoAltSolid } from 'react-icons/lia';
+import { LuArrowUpRight, LuCopy, LuGithub } from 'react-icons/lu';
 import { MdOutlineCss, MdOutlineHtml, MdWhatsapp } from 'react-icons/md';
 import { RiDiscordLine } from 'react-icons/ri';
 import { SiDocker, SiInsomnia, SiVitest } from 'react-icons/si';
@@ -50,6 +52,11 @@ export const Icons = {
     ArrowUp,
     external: LuArrowUpRight,
     discord: RiDiscordLine,
+    chevronLeft: FaChevronLeft,
+    plus: AiOutlinePlus,
+    copy: LuCopy,
+    semiShield: FaShieldAlt,
+    undo: LiaUndoAltSolid,
     // techs
     php: BiLogoPhp,
     laravel: FaLaravel,
