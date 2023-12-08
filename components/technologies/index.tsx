@@ -3,7 +3,7 @@ import { TechLink, TechLinkProps } from './link';
 
 export function Technologies() {
     return (
-        <section id="sobre" className="px-4">
+        <section id="tecnologias" className="px-4">
             <div className="container px-0 py-10 border-t md:mx-auto md:py-20">
                 <div className="w-full max-w-6xl mx-auto text-left">
                     <h2 className="mb-6 text-3xl font-bold md:text-4xl">Tecnologias</h2>
