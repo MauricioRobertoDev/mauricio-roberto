@@ -1,31 +1,8 @@
-'use client';
-import { FormEvent, useRef, useState } from 'react';
 import { MacWindowBar } from '../mac-window-bar';
 import { ContactForm } from './contact-form';
 import { ContactSocialLink } from './social';
 
 export function Contact() {
-    const [emailState, setEmailState] = useState<'sending' | 'success' | 'error' | null>(null);
-    const name = useRef(null);
-    const email = useRef(null);
-    const subject = useRef(null);
-    const message = useRef(null);
-
-    async function handleSubmit(e: FormEvent) {
-        e.preventDefault();
-        setEmailState('sending');
-
-        await fetch('/api/email/send', {
-            method: 'POST',
-            body: JSON.stringify({
-                name: name.current,
-                email: email.current,
-                subject: subject.current,
-                message: message.current,
-            }),
-        });
-    }
-
     return (
         <section id="contato" className="px-4">
             <div className="container px-0 pt-10 border-t md:mx-auto md:pt-20">
