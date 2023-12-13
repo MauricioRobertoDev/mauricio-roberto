@@ -12,6 +12,8 @@ import { RiDiscordLine } from 'react-icons/ri';
 import { SiDocker, SiInsomnia, SiVitest } from 'react-icons/si';
 import { TbBrandGolang, TbBrandVite } from 'react-icons/tb';
 
+export type IconIndex = keyof typeof Icons;
+
 export type Icon = LucideIcon;
 
 export const Icons = {

@@ -31,6 +31,22 @@ const Project = defineDocumentType(() => ({
             type: 'list',
             of: { type: 'string' },
         },
+        github: {
+            type: 'string',
+            required: false,
+        },
+        preview: {
+            type: 'string',
+            required: false,
+        },
+        image: {
+            type: 'string',
+            required: false,
+        },
+        featured: {
+            type: 'boolean',
+            default: false,
+        },
     },
     computedFields: {
         url: {

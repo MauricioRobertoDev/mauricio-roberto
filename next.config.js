@@ -4,6 +4,7 @@ const nextConfig = {
         locales: ['pt-br'],
         defaultLocale: 'pt-br',
     },
+    images: {},
 };
 
 const { withContentlayer } = require('next-contentlayer');

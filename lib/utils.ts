@@ -12,3 +12,7 @@ export function sortProjects(projects: Project[]) {
         .slice()
         .sort((a, b) => compareDesc(parseISO(a.publishedAt), parseISO(b.publishedAt)));
 }
+
+export function getFeaturedProjects(projects: Project[]) {
+    return projects.slice().filter((project) => project.featured);
+}
