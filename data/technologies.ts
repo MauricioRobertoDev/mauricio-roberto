@@ -22,3 +22,26 @@ export const techs: Technology[] = [
     { icon: 'insomnia', text: 'Insomnia' },
     { icon: 'pestphp', text: 'Pest PHP' },
 ];
+
+export const technologies: Record<string, string> = {
+    php: 'PHP',
+    laravel: 'Laravel',
+    react: 'React',
+    javascript: 'Javascript',
+    typescript: 'Typescript',
+    html: 'HTML',
+    css: 'CSS',
+    tailwindcss: 'Tailwind CSS',
+    vuejs: 'Vue JS',
+    nodejs: 'Node JS',
+    npm: 'NPM',
+    git: 'GIT',
+    github: 'Github',
+    mysql: 'My SQL',
+    docker: 'Docker',
+    vite: 'Vite',
+    vitest: 'Vitest',
+    golang: 'Golang',
+    insomnia: 'Insomnia',
+    pestphp: 'Pest PHP',
+};

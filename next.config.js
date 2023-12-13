@@ -4,6 +4,9 @@ const nextConfig = {
         locales: ['pt-br'],
         defaultLocale: 'pt-br',
     },
+    images: {},
 };
 
-module.exports = nextConfig;
+const { withContentlayer } = require('next-contentlayer');
+
+module.exports = withContentlayer(nextConfig);
