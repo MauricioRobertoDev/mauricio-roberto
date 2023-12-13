@@ -1,13 +1,15 @@
 import { ArrowUp, LucideProps, Menu, Moon, Sun, X, Youtube, type LucideIcon } from 'lucide-react';
 import { AiOutlinePlus } from 'react-icons/ai';
 import { BiLogoPhp, BiLogoReact, BiLogoTailwindCss, BiLogoTypescript } from 'react-icons/bi';
+import { CiCalendarDate } from 'react-icons/ci';
 import { DiJavascript1 } from 'react-icons/di';
 import { FaGit, FaLaravel, FaNodeJs, FaNpm, FaShieldAlt, FaVuejs } from 'react-icons/fa';
 import { FaChevronLeft, FaXTwitter } from 'react-icons/fa6';
 import { GrMysql } from 'react-icons/gr';
+import { IoTimeOutline } from 'react-icons/io5';
 import { LiaUndoAltSolid } from 'react-icons/lia';
 import { LuArrowUpRight, LuCopy, LuGithub } from 'react-icons/lu';
-import { MdOutlineCss, MdOutlineHtml, MdWhatsapp } from 'react-icons/md';
+import { MdOutlineCss, MdOutlineHtml, MdOutlineRemoveRedEye, MdWhatsapp } from 'react-icons/md';
 import { RiDiscordLine } from 'react-icons/ri';
 import { SiDocker, SiInsomnia, SiVitest } from 'react-icons/si';
 import { TbBrandGolang, TbBrandVite } from 'react-icons/tb';
@@ -79,4 +81,7 @@ export const Icons = {
     vitest: SiVitest,
     golang: TbBrandGolang,
     insomnia: SiInsomnia,
+    eye: MdOutlineRemoveRedEye,
+    time: IoTimeOutline,
+    calendar: CiCalendarDate,
 };

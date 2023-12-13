@@ -11,7 +11,7 @@ import { ProjectWrapper } from './wrapper';
 export function Projects() {
     const projects = sortProjects(getFeaturedProjects(allProjects));
     return (
-        <section id="tecnologias" className="px-4">
+        <section id="projetos" className="px-4">
             <div className="container px-0 py-10 border-t md:mx-auto md:py-20">
                 <div className="w-full max-w-6xl mx-auto text-left">
                     <div className="flex items-center justify-between w-full mb-6">

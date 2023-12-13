@@ -47,6 +47,14 @@ const Project = defineDocumentType(() => ({
             type: 'boolean',
             default: false,
         },
+        role: {
+            type: 'string',
+            required: true,
+        },
+        year: {
+            type: 'string',
+            required: true,
+        },
     },
     computedFields: {
         url: {
@@ -55,7 +63,7 @@ const Project = defineDocumentType(() => ({
         },
         readingTime: {
             type: 'json',
-            resolve: (doc) => readingTime(doc.body.raw, undefined, 'pt-br'),
+            resolve: (doc) => readingTime(doc.body.raw, 100, 'pt-br'),
         },
         toc: {
             type: 'json',
