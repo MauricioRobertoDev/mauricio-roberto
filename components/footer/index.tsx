@@ -1,6 +1,7 @@
 import { links } from '@/config/menu';
 import { siteConfig } from '@/config/site';
 import Link from 'next/link';
+import { Suspense } from 'react';
 import { Icons } from '../icons';
 import { FooterTop } from './top';
 
@@ -91,7 +92,9 @@ export function Footer() {
             <div className="container flex items-start justify-between pt-4 pb-8 mx-auto ">
                 <h6 className="text-muted-foreground">Todos os direitos reservados.</h6>
                 {/* go to top */}
-                <FooterTop />
+                <Suspense>
+                    <FooterTop />
+                </Suspense>
             </div>
         </footer>
     );

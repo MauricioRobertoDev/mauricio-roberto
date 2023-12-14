@@ -6,6 +6,12 @@ import { ProjectTags } from '@/components/project/tags';
 import { allProjects } from 'contentlayer/generated';
 import { notFound } from 'next/navigation';
 
+export async function generateStaticParams() {
+    return allProjects.map((project) => ({
+        slug: project._raw.flattenedPath.replace('projects/', ''),
+    }));
+}
+
 export default function Page({ params }: { params: { slug: string } }) {
     const project = allProjects.find(
         (project) => project._raw.flattenedPath === 'projects/' + params.slug,

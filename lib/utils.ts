@@ -16,3 +16,7 @@ export function sortProjects(projects: Project[]) {
 export function getFeaturedProjects(projects: Project[]) {
     return projects.slice().filter((project) => project.featured);
 }
+
+export function getProjectsWithTag(projects: Project[], tag: string) {
+    return projects.slice().filter((project) => project.tags?.includes(tag));
+}
