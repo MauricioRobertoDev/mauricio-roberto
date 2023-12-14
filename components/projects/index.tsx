@@ -22,7 +22,7 @@ export function Projects() {
                                 className="gap-2 transition-transform duration-300 group hover:scale-105"
                             >
                                 Ver todos
-                                <Icons.external className="group-hover:rotate-[360deg] transition-transform duration-300" />
+                                <Icons.ArrowUp className="h-4 w-4 rotate-90 group-hover:rotate-[450deg] transition-transform duration-300" />
                             </Button>
                         </Link>
                     </div>

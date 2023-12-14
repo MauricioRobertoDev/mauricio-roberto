@@ -8,7 +8,7 @@ import { FooterTop } from './top';
 export function Footer() {
     return (
         <footer className="w-full bg-background">
-            <div className="container flex flex-wrap items-start justify-between gap-4 pt-8 mx-auto border-t">
+            <div className="container flex flex-col flex-wrap items-start justify-between gap-4 px-4 pt-8 mx-auto border-t md:flex-row">
                 {/* my name */}
                 <div>
                     <h5 className="font-semibold">Mauricio Roberto</h5>
@@ -89,7 +89,7 @@ export function Footer() {
                     </Link>
                 </div>
             </div>
-            <div className="container flex items-start justify-between pt-4 pb-8 mx-auto ">
+            <div className="container flex items-center justify-between px-4 pt-4 pb-8 mx-auto">
                 <h6 className="text-muted-foreground">Todos os direitos reservados.</h6>
                 {/* go to top */}
                 <Suspense>

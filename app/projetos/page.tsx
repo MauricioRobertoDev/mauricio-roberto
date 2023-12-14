@@ -31,14 +31,18 @@ export default function Page() {
                         {projects.map((project, index) => (
                             <div
                                 key={`project-${index}`}
-                                className="w-full space-y-4 border rounded-lg p4 md:p-6"
+                                className="w-full p-4 space-y-4 border rounded-lg md:p-6"
                             >
                                 <h2 className="text-lg font-bold">{project.title}</h2>
                                 <p className="text-muted-foreground">{project.description}</p>
                                 {project.tags && (
                                     <div className="flex flex-wrap gap-2">
                                         {project.tags.map((tag, index) => (
-                                            <TagItem key={`tag-${tag}-${index}`} tag={tag} />
+                                            <TagItem
+                                                key={`tag-${tag}-${index}`}
+                                                to="projetos"
+                                                tag={tag}
+                                            />
                                         ))}
                                     </div>
                                 )}

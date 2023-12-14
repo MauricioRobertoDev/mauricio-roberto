@@ -23,9 +23,3 @@ export type MainNavItem = {
 export type MenuConfig = {
     links: MainNavItem[];
 };
-
-export type Technology = {
-    icon: string;
-    text: string;
-    href?: string;
-};
