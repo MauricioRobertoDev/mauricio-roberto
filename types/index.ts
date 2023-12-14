@@ -8,6 +8,8 @@ export type SiteConfig = {
         github: string;
         youtube: string;
         whatsapp: string;
+        discord: string;
+        source: string;
     };
     author: string;
 };

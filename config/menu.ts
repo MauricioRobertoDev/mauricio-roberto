@@ -7,18 +7,18 @@ export const links: MainNavItem[] = [
     },
     {
         title: 'Sobre',
-        href: '#sobre',
+        href: '/#sobre',
     },
     {
         title: 'Projetos',
-        href: '#projetos',
+        href: '/#projetos',
     },
     {
         title: 'Tecnologias',
-        href: '#tecnologias',
+        href: '/#tecnologias',
     },
     {
         title: 'Contato',
-        href: '#contato',
+        href: '/#contato',
     },
 ];

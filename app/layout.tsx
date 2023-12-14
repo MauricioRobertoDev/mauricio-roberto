@@ -1,4 +1,5 @@
 import { Analytics } from '@/components/analytics';
+import { Footer } from '@/components/footer';
 import { Menu } from '@/components/menu';
 import { ThemeProvider } from '@/components/theme-provider';
 import { siteConfig } from '@/config/site';
@@ -95,8 +96,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 >
                     <Menu />
                     {children}
-                    <VercelAnalytics />
+                    <Footer />
                 </ThemeProvider>
+                <VercelAnalytics />
                 <Analytics />
             </body>
         </html>

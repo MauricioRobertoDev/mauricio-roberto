@@ -14,7 +14,7 @@ export default function Page({ params }: { params: { slug: string } }) {
     if (!project) notFound();
 
     return (
-        <article className="flex-1 w-full h-screen pt-16">
+        <article className="flex-1 w-full min-h-screen pt-16">
             <div className="relative w-full max-w-6xl gap-4 p-0 px-4 py-10 mx-auto border-b">
                 <div className="space-y-6">
                     <ProjectLinks {...project} />
