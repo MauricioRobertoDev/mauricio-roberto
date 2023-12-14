@@ -34,7 +34,7 @@ export function Footer() {
 
                     <Link
                         className="flex items-center gap-2 text-muted-foreground hover:text-foreground"
-                        key="footer-link-discord"
+                        key="footer-link-github"
                         href={siteConfig.links.github}
                     >
                         Github
@@ -43,7 +43,7 @@ export function Footer() {
 
                     <Link
                         className="flex items-center gap-2 text-muted-foreground hover:text-foreground"
-                        key="footer-link-discord"
+                        key="footer-link-whatsapp"
                         href={siteConfig.links.whatsapp}
                     >
                         Whatsapp
@@ -52,7 +52,7 @@ export function Footer() {
 
                     <Link
                         className="flex items-center gap-2 text-muted-foreground hover:text-foreground"
-                        key="footer-link-discord"
+                        key="footer-link-youtube"
                         href={siteConfig.links.youtube}
                     >
                         Youtube

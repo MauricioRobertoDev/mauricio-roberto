@@ -15,9 +15,9 @@ export function Analytics() {
         }
     }, [pathname, searchParams]);
 
-    // if (process.env.NEXT_PUBLIC_VERCEL_ENV !== 'production') {
-    //     return null;
-    // }
+    if (process.env.NEXT_PUBLIC_VERCEL_ENV !== 'production') {
+        return null;
+    }
 
     return (
         <>
@@ -31,7 +31,7 @@ export function Analytics() {
             </noscript>
             <Script
                 id="gtm-script"
-                strategy="afterInteractive"
+                strategy="lazyOnload"
                 dangerouslySetInnerHTML={{
                     __html: `
     (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
