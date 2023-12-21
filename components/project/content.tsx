@@ -1,3 +1,5 @@
+'use client';
+import components from '@/components/mdx';
 import { Project } from 'contentlayer/generated';
 import { useMDXComponent } from 'next-contentlayer/hooks';
 
@@ -6,7 +8,7 @@ export function ProjectContent({ project, slug }: { project: Project; slug: stri
 
     return (
         <div>
-            <MDXContent />
+            <MDXContent components={{ ...components }} />
         </div>
     );
 }
