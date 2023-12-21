@@ -4,6 +4,7 @@ import { Menu } from '@/components/menu';
 import { ThemeProvider } from '@/components/theme-provider';
 import { siteConfig } from '@/config/site';
 import { cn } from '@/lib/utils';
+import '@code-hike/mdx/dist/index.css';
 import { Analytics as VercelAnalytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Metadata, Viewport } from 'next';

@@ -1,6 +1,7 @@
 import { defineDocumentType, makeSource } from '@contentlayer/source-files';
 import GithubSlugger from 'github-slugger';
 import { readingTime } from 'reading-time-estimator';
+import rehypePrettyCode from 'rehype-pretty-code';
 
 const Project = defineDocumentType(() => ({
     name: 'Project',
@@ -87,7 +88,18 @@ const Project = defineDocumentType(() => ({
     },
 }));
 
+/** @type {import('rehype-pretty-code').Options} */
+const options = {
+    // See Options section below.
+    theme: 'material-theme-palenight',
+    defaultLang: 'plaintext',
+};
+
 export default makeSource({
     contentDirPath: 'content',
     documentTypes: [Project],
+    mdx: {
+        // remarkPlugins: [[remarkCodeHike, { theme: 'material-palenight' }]],
+        rehypePlugins: [[rehypePrettyCode, options]],
+    },
 });
