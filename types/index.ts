@@ -12,6 +12,7 @@ export type SiteConfig = {
         source: string;
     };
     author: string;
+    keywords: string[];
 };
 
 export type MainNavItem = {

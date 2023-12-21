@@ -1,7 +1,7 @@
 import { SiteConfig } from '@/types';
 
 export const siteConfig: SiteConfig = {
-    name: 'Mauricio Roberto - Desenvolvedor Junior',
+    name: 'Mauricio Roberto',
     description:
         'Desenvolvedor autodidata buscando oportunidades como júnior. Explore minha jornada e projetos em tecnologias web. Contate-me para colaborações e freelas.',
     url: 'https://mauricioroberto.com',
@@ -15,4 +15,5 @@ export const siteConfig: SiteConfig = {
         source: 'https://github.com/mauriciorobertodev/mauricio-roberto',
     },
     author: 'Mauricio Roberto',
+    keywords: ['programação', 'desenvolvedor', 'fullstack', 'junior', 'mauricio roberto'],
 };
