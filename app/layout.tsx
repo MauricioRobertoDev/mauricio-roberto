@@ -6,7 +6,7 @@ import { siteConfig } from '@/config/site';
 import { cn } from '@/lib/utils';
 import { Analytics as VercelAnalytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
-import { Viewport } from 'next';
+import { Metadata, Viewport } from 'next';
 import { Inter } from 'next/font/google';
 import localFont from 'next/font/local';
 import { Suspense } from 'react';
@@ -29,7 +29,7 @@ export const viewport: Viewport = {
     ],
 };
 
-export const metadata = {
+export const metadata: Metadata = {
     metadataBase: new URL(siteConfig.url),
     title: {
         default: siteConfig.name,
@@ -39,17 +39,7 @@ export const metadata = {
         canonical: `${siteConfig.url}`,
     },
     description: siteConfig.description,
-    keywords: [
-        'Desenvolvedor',
-        'Programador',
-        'Júnior',
-        'Freelancer',
-        'PHP',
-        'ReactJS',
-        'Javascript',
-        'Typescript',
-        'Laravel',
-    ],
+    keywords: siteConfig.keywords,
     authors: [
         {
             name: siteConfig.author,
@@ -64,6 +54,13 @@ export const metadata = {
         title: siteConfig.name,
         description: siteConfig.description,
         siteName: siteConfig.name,
+        images: [
+            {
+                url: `${siteConfig.url}/og.jpg`,
+                width: 1920,
+                height: 1080,
+            },
+        ],
     },
     twitter: {
         card: 'summary_large_image',
@@ -78,6 +75,18 @@ export const metadata = {
         apple: '/apple-touch-icon.png',
     },
     manifest: `${siteConfig.url}/site.webmanifest`,
+    robots: {
+        index: true,
+        follow: true,
+        googleBot: {
+            index: true,
+            follow: true,
+            noimageindex: true,
+            'max-video-preview': -1,
+            'max-image-preview': 'large',
+            'max-snippet': -1,
+        },
+    },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

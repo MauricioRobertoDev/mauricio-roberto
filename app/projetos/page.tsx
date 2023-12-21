@@ -1,14 +1,52 @@
-'use client';
 import { Icons } from '@/components/icons';
 import { TagItem } from '@/components/tag-item';
+import { siteConfig } from '@/config/site';
 import { getProjectsWithTag, sortProjects } from '@/lib/utils';
 import { allProjects } from 'contentlayer/generated';
+import { Metadata } from 'next';
 import Link from 'next/link';
-import { useSearchParams } from 'next/navigation';
 
-export default function Page() {
-    const searchParams = useSearchParams();
-    const tag = searchParams.get('tag');
+const title = 'Projetos';
+const description =
+    'Explore minha carteira de projetos de desenvolvimento, abrangendo tecnologias modernas e soluções inovadoras. Desde aplicativos web responsivos até sistemas robustos, descubra como transformo ideias em realidade. Conheça meu trabalho agora';
+const url = siteConfig.url + '/projetos';
+
+export const metadata: Metadata = {
+    title,
+    description,
+    alternates: { canonical: url },
+    openGraph: {
+        title,
+        description,
+        url,
+        siteName: siteConfig.name,
+        images: [
+            {
+                // TODO: gerar uma imagem usando serviço
+                url: 'https://nextjs.org/og.png',
+                width: 800,
+                height: 600,
+            },
+        ],
+        locale: 'pt_BR',
+        type: 'website',
+    },
+    authors: {
+        name: siteConfig.author,
+        url: siteConfig.url,
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title,
+        description,
+        // images: [`${siteConfig.url}/og.jpg`],
+        // TODO: por a imagem gerada aqui
+        creator: '@imauriciodev',
+    },
+};
+
+export default function Page({ searchParams }: { searchParams: { tag?: string } }) {
+    const { tag } = searchParams;
     const projects = sortProjects(tag ? getProjectsWithTag(allProjects, tag) : allProjects);
     const hasProjects = projects.length > 0;
     return (
