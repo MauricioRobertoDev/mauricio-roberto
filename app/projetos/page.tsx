@@ -1,7 +1,7 @@
 import { Icons } from '@/components/icons';
 import { TagItem } from '@/components/tag-item';
 import { siteConfig } from '@/config/site';
-import { getProjectsWithTag, sortProjects } from '@/lib/utils';
+import { getDefaultOgImages, getProjectsWithTag, sortProjects } from '@/lib/utils';
 import { allProjects } from 'contentlayer/generated';
 import { Metadata } from 'next';
 import Link from 'next/link';
@@ -10,6 +10,8 @@ const title = 'Projetos';
 const description =
     'Explore minha carteira de projetos de desenvolvimento, abrangendo tecnologias modernas e soluções inovadoras. Desde aplicativos web responsivos até sistemas robustos, descubra como transformo ideias em realidade. Conheça meu trabalho agora';
 const url = siteConfig.url + '/projetos';
+
+const ogImages = getDefaultOgImages(title);
 
 export const metadata: Metadata = {
     title,
@@ -20,14 +22,7 @@ export const metadata: Metadata = {
         description,
         url,
         siteName: siteConfig.name,
-        images: [
-            {
-                // TODO: gerar uma imagem usando serviço
-                url: 'https://nextjs.org/og.png',
-                width: 800,
-                height: 600,
-            },
-        ],
+        images: ogImages,
         locale: 'pt_BR',
         type: 'website',
     },
@@ -39,8 +34,7 @@ export const metadata: Metadata = {
         card: 'summary_large_image',
         title,
         description,
-        // images: [`${siteConfig.url}/og.jpg`],
-        // TODO: por a imagem gerada aqui
+        images: ogImages,
         creator: '@imauriciodev',
     },
 };

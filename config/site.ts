@@ -4,7 +4,11 @@ export const siteConfig: SiteConfig = {
     name: 'Mauricio Roberto',
     description:
         'Desenvolvedor autodidata buscando oportunidades como júnior. Explore minha jornada e projetos em tecnologias web. Contate-me para colaborações e freelas.',
-    url: 'https://mauricioroberto.com',
+    url:
+        process.env.NEXT_PUBLIC_VERCEL_ENV !== 'production'
+            ? 'http://localhost:3000'
+            : 'https://mauricioroberto.com',
+
     ogImage: 'op.jpg',
     links: {
         twitter: 'https://twitter.com/imauriciodev',

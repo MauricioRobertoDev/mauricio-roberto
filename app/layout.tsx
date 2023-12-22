@@ -3,7 +3,7 @@ import { Footer } from '@/components/footer';
 import { Menu } from '@/components/menu';
 import { ThemeProvider } from '@/components/theme-provider';
 import { siteConfig } from '@/config/site';
-import { cn } from '@/lib/utils';
+import { cn, getDefaultOgImages } from '@/lib/utils';
 import '@code-hike/mdx/dist/index.css';
 import { Analytics as VercelAnalytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
@@ -30,6 +30,8 @@ export const viewport: Viewport = {
     ],
 };
 
+const ogImages = getDefaultOgImages();
+
 export const metadata: Metadata = {
     metadataBase: new URL(siteConfig.url),
     title: {
@@ -55,19 +57,13 @@ export const metadata: Metadata = {
         title: siteConfig.name,
         description: siteConfig.description,
         siteName: siteConfig.name,
-        images: [
-            {
-                url: `${siteConfig.url}/og.jpg`,
-                width: 1920,
-                height: 1080,
-            },
-        ],
+        images: ogImages,
     },
     twitter: {
         card: 'summary_large_image',
         title: siteConfig.name,
         description: siteConfig.description,
-        images: [`${siteConfig.url}/og.jpg`],
+        images: ogImages,
         creator: '@imauriciodev',
     },
     icons: {

@@ -4,6 +4,7 @@ import { ProjectInfo } from '@/components/project/info';
 import { ProjectLinks } from '@/components/project/links';
 import { ProjectTags } from '@/components/project/tags';
 import { siteConfig } from '@/config/site';
+import { getOgImagesToProject } from '@/lib/utils';
 import { allProjects } from 'contentlayer/generated';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
@@ -29,6 +30,7 @@ export async function generateMetadata({
 
     const publishedTime = new Date(project.publishedAt).toISOString();
     const modifiedTime = new Date(project.updatedAt || project.publishedAt).toISOString();
+    const ogImages = getOgImagesToProject(project);
 
     return {
         title: project.title,
@@ -38,14 +40,7 @@ export async function generateMetadata({
             description: project.description,
             url: siteConfig.url + '/' + project.url,
             siteName: siteConfig.name,
-            images: [
-                {
-                    // TODO: gerar uma imagem usando serviço
-                    url: 'https://nextjs.org/og.png',
-                    width: 800,
-                    height: 600,
-                },
-            ],
+            images: ogImages,
             locale: 'pt_BR',
             type: 'article',
             publishedTime,
@@ -59,8 +54,7 @@ export async function generateMetadata({
             card: 'summary_large_image',
             title: project.title,
             description: project.description,
-            // images: [`${siteConfig.url}/og.jpg`],
-            // TODO: por a imagem gerada aqui
+            images: ogImages,
             creator: '@imauriciodev',
         },
     };
@@ -110,7 +104,7 @@ export default function Page({ params }: { params: { slug: string } }) {
                     {project.tags && <ProjectTags tags={project.tags} />}
                 </div>
             </div>
-            <div className="w-full max-w-6xl px-4 pt-6 pb-10 mx-auto prose dark:prose-invert">
+            <div className="w-full max-w-6xl px-4 pt-6 pb-10 mx-auto prose dark:prose-invert prose-li:marker:text-foreground">
                 <div className="min-w-full gap-8 md:grid md:grid-cols-12">
                     <div className="col-span-8">
                         {/* <p>{project.description}</p> */}
