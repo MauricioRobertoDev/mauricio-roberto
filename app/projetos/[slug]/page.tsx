@@ -104,7 +104,7 @@ export default function Page({ params }: { params: { slug: string } }) {
                     {project.tags && <ProjectTags tags={project.tags} />}
                 </div>
             </div>
-            <div className="w-full max-w-6xl px-4 pt-6 pb-10 mx-auto prose dark:prose-invert prose-li:marker:text-foreground">
+            <div className="w-full max-w-6xl px-4 pt-6 pb-10 mx-auto prose dark:prose-invert prose-code:bg-code prose-code:py-1 prose-code:px-2 prose-code:rounded prose-code:font-fira">
                 <div className="min-w-full gap-8 md:grid md:grid-cols-12">
                     <div className="col-span-8">
                         {/* <p>{project.description}</p> */}

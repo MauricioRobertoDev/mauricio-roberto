@@ -8,7 +8,7 @@ import '@code-hike/mdx/dist/index.css';
 import { Analytics as VercelAnalytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Metadata, Viewport } from 'next';
-import { Inter } from 'next/font/google';
+import { Fira_Code, Inter } from 'next/font/google';
 import localFont from 'next/font/local';
 import { Suspense } from 'react';
 import './globals.css';
@@ -16,6 +16,10 @@ import './globals.css';
 const inter = Inter({
     subsets: ['latin'],
     variable: '--font-sans',
+});
+const fira = Fira_Code({
+    subsets: ['latin'],
+    variable: '--font-fira',
 });
 
 const heading = localFont({
@@ -94,6 +98,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     'min-h-screen bg-background antialiased font-sans scroll-smooth scrollbar-thin scrollbar-track-foreground/5 scrollbar-thumb-main',
                     inter.variable,
                     heading.variable,
+                    fira.variable,
                 )}
             >
                 <ThemeProvider

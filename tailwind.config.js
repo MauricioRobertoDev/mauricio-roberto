@@ -1,5 +1,17 @@
 const { fontFamily } = require('tailwindcss/defaultTheme');
 
+const disabledCss = {
+    'code::before': false,
+    'code::after': false,
+    'blockquote p:first-of-type::before': false,
+    'blockquote p:last-of-type::after': false,
+    pre: false,
+    code: false,
+    'pre code': false,
+    'code::before': false,
+    'code::after': false,
+};
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
     darkMode: ['class'],
@@ -18,14 +30,23 @@ module.exports = {
             },
         },
         extend: {
+            typography: {
+                DEFAULT: { css: disabledCss },
+                sm: { css: disabledCss },
+                lg: { css: disabledCss },
+                xl: { css: disabledCss },
+                '2xl': { css: disabledCss },
+            },
             backdropBlur: {
                 200: '200px',
             },
             fontFamily: {
                 sans: ['var(--font-sans)', ...fontFamily.sans],
                 heading: ['var(--font-heading)', ...fontFamily.sans],
+                fira: ['var(--font-fira)', ...fontFamily.sans],
             },
             colors: {
+                code: '#1f2937',
                 main: {
                     DEFAULT: '#60A5FA',
                     50: '#DCEDFF',

@@ -93,6 +93,7 @@ const options = {
     // See Options section below.
     theme: 'material-theme-palenight',
     defaultLang: 'plaintext',
+    keepBackground: false,
 };
 
 export default makeSource({

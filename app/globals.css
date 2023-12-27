@@ -68,6 +68,11 @@ code {
 
 pre > code {
     counter-reset: line;
+    @apply rounded-b-lg px-0;
+}
+
+[data-rehype-pretty-code-figure] > pre > code {
+    @apply !px-0 font-fira text-sm;
 }
 
 code[data-theme*=' '],
@@ -95,7 +100,11 @@ code[data-line-numbers] > [data-line]::before {
 }
 
 pre [data-line] {
-    @apply px-6 border-l-2 border-l-transparent;
+    @apply px-4 border-l-2 border-l-transparent;
+}
+
+pre [data-line] mark {
+    @apply bg-white/20;
 }
 
 [data-highlighted-line] {
@@ -128,14 +137,14 @@ pre [data-line] {
     @apply !text-purple-200 bg-purple-800/50 border-b-purple-600 font-bold;
 }
 
+[data-rehype-pretty-code-figure] > pre > code {
+    @apply py-4 bg-code;
+}
+
 [data-rehype-pretty-code-title] {
-    @apply bg-zinc-700 text-zinc-200 rounded-t-lg py-2 px-3 font-semibold text-sm;
+    @apply text-white py-3 border-b border-background px-4 rounded-t-lg font-semibold bg-code;
 }
 
-figcaption + pre {
-    @apply !rounded-t-none;
-}
-
-li > figure {
-    @apply !mt-2 !mb-6;
+[data-rehype-pretty-code-figure] {
+    @apply overflow-auto rounded-md;
 }
