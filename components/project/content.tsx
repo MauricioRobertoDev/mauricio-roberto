@@ -7,7 +7,7 @@ export function ProjectContent({ project, slug }: { project: Project; slug: stri
     const MDXContent = useMDXComponent(project.body.code);
 
     return (
-        <div>
+        <div className="article">
             <MDXContent components={{ ...components }} />
         </div>
     );

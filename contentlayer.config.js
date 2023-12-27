@@ -1,7 +1,10 @@
 import { defineDocumentType, makeSource } from '@contentlayer/source-files';
 import GithubSlugger from 'github-slugger';
 import { readingTime } from 'reading-time-estimator';
+import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypePrettyCode from 'rehype-pretty-code';
+import rehypeSlug from 'rehype-slug';
+import remarkGfm from 'remark-gfm';
 
 const Project = defineDocumentType(() => ({
     name: 'Project',
@@ -101,6 +104,11 @@ export default makeSource({
     documentTypes: [Project],
     mdx: {
         // remarkPlugins: [[remarkCodeHike, { theme: 'material-palenight' }]],
-        rehypePlugins: [[rehypePrettyCode, options]],
+        remarkPlugins: [remarkGfm],
+        rehypePlugins: [
+            [rehypePrettyCode, options],
+            rehypeSlug,
+            [rehypeAutolinkHeadings, { behavior: 'prepend' }],
+        ],
     },
 });

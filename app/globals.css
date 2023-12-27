@@ -148,3 +148,34 @@ pre [data-line] mark {
 [data-rehype-pretty-code-figure] {
     @apply overflow-auto rounded-md;
 }
+
+li > [data-rehype-pretty-code-figure] {
+    @apply mt-2;
+}
+.article > h1,
+.article > h2,
+.article > h3,
+.article > h4,
+.article > h5,
+.article > h6 {
+    @apply relative flex items-center justify-start;
+}
+
+.article > h1:hover > a > .icon.icon-link::before,
+.article > h2:hover > a > .icon.icon-link::before,
+.article > h3:hover > a > .icon.icon-link::before,
+.article > h4:hover > a > .icon.icon-link::before,
+.article > h5:hover > a > .icon.icon-link::before,
+.article > h6:hover > a > .icon.icon-link::before {
+    @apply text-foreground;
+}
+
+h1 > a > .icon.icon-link::before,
+h2 > a > .icon.icon-link::before,
+h3 > a > .icon.icon-link::before,
+h4 > a > .icon.icon-link::before,
+h5 > a > .icon.icon-link::before,
+h6 > a > .icon.icon-link::before {
+    content: '#';
+    @apply !no-underline absolute top-0 -left-6 text-foreground/10 h-6 w-6;
+}
