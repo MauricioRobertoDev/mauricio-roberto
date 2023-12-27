@@ -14,7 +14,7 @@ const Inter700 = fetch(new URL('../../../../assets/fonts/Inter-Bold.ttf', import
     (res) => res.arrayBuffer(),
 );
 
-export const runtime = 'edge';
+// export const runtime = 'edge';
 
 export async function GET(request: NextRequest) {
     try {
