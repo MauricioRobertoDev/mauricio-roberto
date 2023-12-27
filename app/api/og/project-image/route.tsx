@@ -6,15 +6,15 @@ import ptBR from 'date-fns/locale/pt-BR';
 import { ImageResponse } from 'next/og';
 import { NextRequest } from 'next/server';
 
-const Inter400 = fetch(new URL('../../../../assets/fonts/Inter-Regular.ttf', import.meta.url)).then(
-    (res) => res.arrayBuffer(),
-);
+// const Inter400 = fetch(new URL('../../../../assets/fonts/Inter-Regular.ttf', import.meta.url)).then(
+//     (res) => res.arrayBuffer(),
+// );
 
 const Inter700 = fetch(new URL('../../../../assets/fonts/Inter-Bold.ttf', import.meta.url)).then(
     (res) => res.arrayBuffer(),
 );
 
-// export const runtime = 'edge';
+export const runtime = 'edge';
 
 export async function GET(request: NextRequest) {
     try {
@@ -32,16 +32,10 @@ export async function GET(request: NextRequest) {
             height,
             fonts: [
                 {
-                    data: await Inter400,
-                    name: 'Inter',
-                    style: 'normal',
-                    weight: 400,
-                },
-                {
                     data: await Inter700,
                     name: 'Inter',
                     style: 'normal',
-                    weight: 800,
+                    weight: 700,
                 },
             ],
         });
