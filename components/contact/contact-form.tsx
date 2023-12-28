@@ -1,10 +1,10 @@
 'use client';
+import { sendContact } from '@/actions/contact';
 import { Button } from '@/components/ui/button';
 import { Form, FormField, FormItem, FormMessage } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { zodResolver } from '@hookform/resolvers/zod';
-import axios from 'axios';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import * as z from 'zod';
@@ -32,15 +32,13 @@ export function ContactForm() {
         },
     });
 
-    function onSubmit(values: z.infer<typeof formSchema>) {
+    async function onSubmit(values: z.infer<typeof formSchema>) {
         setEmailState('sending');
-        axios
-            .post<{ send: 'ok' | 'fail' }>('/api/email/send', values)
-            .then((response) => {
-                if (response.data.send == 'ok') setEmailState('success');
-                if (response.data.send == 'fail') setEmailState('fail');
-            })
-            .catch((err) => setEmailState('fail'));
+
+        const res = await sendContact(values);
+
+        if (res == 'ok') setEmailState('success');
+        if (res == 'fail') setEmailState('fail');
     }
 
     return (
@@ -50,7 +48,7 @@ export function ContactForm() {
                 <Form {...form}>
                     <form
                         onSubmit={form.handleSubmit(onSubmit)}
-                        className="w-full  space-y-6 prose text-left max-w-prose dark:text-white"
+                        className="w-full space-y-6 prose text-left max-w-prose dark:text-white"
                     >
                         <FormField
                             control={form.control}

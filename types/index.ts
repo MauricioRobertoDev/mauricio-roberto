@@ -24,3 +24,10 @@ export type MainNavItem = {
 export type MenuConfig = {
     links: MainNavItem[];
 };
+
+export type ContactMessage = {
+    name: string;
+    email: string;
+    subject: string;
+    message: string;
+};
