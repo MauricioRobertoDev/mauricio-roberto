@@ -20,7 +20,7 @@ export function ProjectLinks({ preview, github }: { github?: string; preview?: s
                         href={github}
                         rel="noreferrer noopener"
                         target="_blank"
-                        aria-labelledby="link-for-github"
+                        aria-label="link para o github do projeto"
                         role="link"
                     >
                         <Button
@@ -31,9 +31,6 @@ export function ProjectLinks({ preview, github }: { github?: string; preview?: s
                             Github
                             <Icons.external className="w-5 h-5 group-hover:rotate-[360deg] transition-transform duration-300" />
                         </Button>
-                        <p id="link-for-github" className="sr-only">
-                            link para o github
-                        </p>
                     </a>
                 )}
                 {preview && (
@@ -41,7 +38,7 @@ export function ProjectLinks({ preview, github }: { github?: string; preview?: s
                         href="/projetos"
                         rel="noreferrer noopener"
                         target="_blank"
-                        aria-labelledby="link-for-preview"
+                        aria-label="link para a página de preview"
                         role="link"
                     >
                         <Button
@@ -52,9 +49,6 @@ export function ProjectLinks({ preview, github }: { github?: string; preview?: s
                             Preview
                             <Icons.external className="w-5 h-5 group-hover:rotate-[360deg] transition-transform duration-300" />
                         </Button>
-                        <p id="link-for-preview" className="sr-only">
-                            link para o github
-                        </p>
                     </a>
                 )}
             </div>

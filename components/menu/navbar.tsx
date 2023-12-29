@@ -2,13 +2,11 @@
 import { Icons } from '@/components/icons';
 import { ToggleTheme } from '@/components/toggle-theme';
 import { Button } from '@/components/ui/button';
-import { links } from '@/config/menu';
 import { cn } from '@/lib/utils';
-import Link from 'next/link';
-import { useState } from 'react';
+import { PropsWithChildren, useState } from 'react';
 import { SocialLinks } from '../social-links';
 
-export function MenuNavbar() {
+export function MenuNavbar({ children }: PropsWithChildren) {
     const [showMobileMenu, setShowMobileMenu] = useState<boolean>(false);
 
     function toggleMobileMenu() {
@@ -18,6 +16,7 @@ export function MenuNavbar() {
     return (
         <div className="flex items-center gap-4">
             <nav
+                role="menubar"
                 className={cn(
                     `	
 						bg-background md:bg-transparent md:gap-6 gap-2 flex flex-col md:flex-row h-screen md:h-full 
@@ -30,23 +29,7 @@ export function MenuNavbar() {
                 )}
                 data-mobile={showMobileMenu}
             >
-                {links.map((item, index) => (
-                    <Link
-                        onClick={toggleMobileMenu}
-                        href={item.disabled ? '#' : item.href}
-                        key={index}
-                        className={cn(
-                            `
-                                items-center text-4xl py-2 md:py-0 font-bold md:font-normal md:text-sm w-min transition-colors hover:text-foreground text-foreground 
-                                md:text-foreground/70 justify-center after:hover:scale-x-100 after:scale-x-0 after:block block after:border-b-2 after:border-foreground 
-                                after:transition after:duration-300 group
-                            `,
-                            item.disabled && 'cursor-not-allowed opacity-80',
-                        )}
-                    >
-                        <span className="flex gap-2 whitespace-nowrap"># {item.title}</span>
-                    </Link>
-                ))}
+                {children}
                 <SocialLinks className="flex flex-row items-center w-full gap-6 pt-4 md:hidden text-muted-foreground" />
             </nav>
 

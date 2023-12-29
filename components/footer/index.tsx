@@ -11,7 +11,7 @@ export function Footer() {
             <div className="container flex flex-col flex-wrap items-start justify-between gap-4 px-4 pt-8 mx-auto border-t md:flex-row">
                 {/* my name */}
                 <div>
-                    <h5 className="font-semibold">Mauricio Roberto</h5>
+                    <h2 className="font-semibold">Mauricio Roberto</h2>
                     <p className="text-muted-foreground">Feito com ❤️‍🔥 e 🧠 usando Next JS.</p>
                 </div>
                 {/* links */}
@@ -19,7 +19,7 @@ export function Footer() {
                     <h6 className="mb-2 font-semibold">Interno</h6>
                     {links.map((link) => (
                         <Link
-                            className="flex items-center gap-2 text-muted-foreground hover:text-foreground"
+                            className="flex items-center h-12 gap-2 text-muted-foreground hover:text-foreground"
                             key={`footer-link-${link.title}`}
                             href={link.href}
                         >
@@ -33,7 +33,7 @@ export function Footer() {
                     <h6 className="mb-2 font-semibold">Social</h6>
 
                     <Link
-                        className="flex items-center gap-2 text-muted-foreground hover:text-foreground"
+                        className="flex items-center h-12 gap-2 text-muted-foreground hover:text-foreground"
                         key="footer-link-github"
                         href={siteConfig.links.github}
                     >
@@ -42,7 +42,7 @@ export function Footer() {
                     </Link>
 
                     <Link
-                        className="flex items-center gap-2 text-muted-foreground hover:text-foreground"
+                        className="flex items-center h-12 gap-2 text-muted-foreground hover:text-foreground"
                         key="footer-link-whatsapp"
                         href={siteConfig.links.whatsapp}
                     >
@@ -51,7 +51,7 @@ export function Footer() {
                     </Link>
 
                     <Link
-                        className="flex items-center gap-2 text-muted-foreground hover:text-foreground"
+                        className="flex items-center h-12 gap-2 text-muted-foreground hover:text-foreground"
                         key="footer-link-youtube"
                         href={siteConfig.links.youtube}
                     >
@@ -60,7 +60,7 @@ export function Footer() {
                     </Link>
 
                     <Link
-                        className="flex items-center gap-2 text-muted-foreground hover:text-foreground"
+                        className="flex items-center h-12 gap-2 text-muted-foreground hover:text-foreground"
                         key="footer-link-discord"
                         href={siteConfig.links.discord}
                     >
@@ -72,14 +72,14 @@ export function Footer() {
                 <div className="flex flex-col">
                     <h6 className="mb-2 font-semibold">Outros</h6>
                     <Link
-                        className="flex items-center gap-2 text-muted-foreground hover:text-foreground"
+                        className="flex items-center h-12 gap-2 text-muted-foreground hover:text-foreground"
                         href="/projetos"
                     >
                         Todos os projetos
                         <Icons.ArrowUp className="w-4 h-4 rotate-90" />
                     </Link>
                     <Link
-                        className="flex items-center gap-2 text-muted-foreground hover:text-foreground"
+                        className="flex items-center h-12 gap-2 text-muted-foreground hover:text-foreground"
                         href={siteConfig.links.source}
                         target="_blank"
                         rel="noreferrer noopener"

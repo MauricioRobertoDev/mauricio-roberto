@@ -28,7 +28,7 @@ export function ProductOverlay({
                     rel="noreferrer noopener"
                     target="_blank"
                     role="link"
-                    aria-labelledby="link-for-preview"
+                    aria-label="link para o preview"
                 >
                     <Button
                         variant="outline"
@@ -37,9 +37,6 @@ export function ProductOverlay({
                         Preview
                         <Icons.external />
                     </Button>
-                    <p id="link-for-preview" className="sr-only">
-                        link para o preview
-                    </p>
                 </a>
             )}
             {github && (
@@ -47,7 +44,7 @@ export function ProductOverlay({
                     rel="noreferrer noopener"
                     target="_blank"
                     role="link"
-                    aria-labelledby="link-for-github"
+                    aria-label="link para github do projeto"
                     href={github}
                 >
                     <Button
@@ -57,9 +54,6 @@ export function ProductOverlay({
                         Github
                         <Icons.external />
                     </Button>
-                    <p id="link-for-github" className="sr-only">
-                        link para o github
-                    </p>
                 </a>
             )}
         </div>

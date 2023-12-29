@@ -13,7 +13,7 @@ export function SocialLinks(props: HTMLAttributes<HTMLDivElement>) {
                 className="group"
                 rel="noreferrer noopener"
                 target="_blank"
-                aria-labelledby="link-for-github"
+                aria-label="link para o github"
                 role="link"
             >
                 <Icons.github className="w-5 h-5 group-hover:text-main" />
@@ -24,7 +24,7 @@ export function SocialLinks(props: HTMLAttributes<HTMLDivElement>) {
                 className="group"
                 rel="noreferrer noopener"
                 target="_blank"
-                aria-labelledby="link-for-youtube"
+                aria-label="link para o youtube"
                 role="link"
             >
                 <Icons.Youtube className="w-5 h-5 group-hover:text-main" />
@@ -34,7 +34,7 @@ export function SocialLinks(props: HTMLAttributes<HTMLDivElement>) {
                 className="group"
                 rel="noreferrer noopener"
                 target="_blank"
-                aria-labelledby="link-for-whatsapp"
+                aria-label="link para o whatsapp"
                 role="link"
             >
                 <Icons.whatsapp className="w-4 h-4 group-hover:text-main" />
@@ -44,23 +44,11 @@ export function SocialLinks(props: HTMLAttributes<HTMLDivElement>) {
                 className="group"
                 rel="noreferrer noopener"
                 target="_blank"
-                aria-labelledby="link-for-twitter"
+                aria-label="link para o twitter"
                 role="link"
             >
                 <Icons.Twitter className="w-5 h-5 group-hover:text-main" />
             </a>
-            <p id="link-for-github" className="sr-only">
-                link para o github
-            </p>
-            <p id="link-for-youtube" className="sr-only">
-                link para o youtube
-            </p>
-            <p id="link-for-twitter" className="sr-only">
-                link para o twitter
-            </p>
-            <p id="link-for-whatsapp" className="sr-only">
-                link para o whatsapp
-            </p>
         </div>
     );
 }

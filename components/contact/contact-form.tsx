@@ -4,26 +4,20 @@ import { Button } from '@/components/ui/button';
 import { Form, FormField, FormItem, FormMessage } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
+import { contactSchema } from '@/schemas';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import * as z from 'zod';
+import { z } from 'zod';
 import { ContactFail } from './fail';
 import { ContactSending } from './sending';
 import { ContactSuccess } from './success';
 
-const formSchema = z.object({
-    name: z.string().min(3, 'Ops, não conheço nenhum nome com menos de 3 letras.'),
-    email: z.string().email('Deve ser um email válido'),
-    subject: z.string().min(3, 'Diga qual é o assunto por gentileza'),
-    message: z.string().min(10, 'Preciso ter mais detalhes sobre o assunto'),
-});
-
 export function ContactForm() {
     const [emailState, setEmailState] = useState<'sending' | 'success' | 'fail' | null>(null);
 
-    const form = useForm<z.infer<typeof formSchema>>({
-        resolver: zodResolver(formSchema),
+    const form = useForm<z.infer<typeof contactSchema>>({
+        resolver: zodResolver(contactSchema),
         defaultValues: {
             name: '',
             email: '',
@@ -32,7 +26,7 @@ export function ContactForm() {
         },
     });
 
-    async function onSubmit(values: z.infer<typeof formSchema>) {
+    async function onSubmit(values: z.infer<typeof contactSchema>) {
         setEmailState('sending');
 
         const res = await sendContact(values);
